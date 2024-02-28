@@ -1,0 +1,21 @@
+<?php
+
+$url = 'https://www.bcv.org.ve/';
+$content = file_get_contents($url);
+
+echo '<textarea name="" id="" cols="30" rows="10">'.$content.'</textarea>';
+
+
+
+$curl = curl_init();
+curl_setopt($curl, CURLOPT_URL, 'https://www.google.com/search?q=CURL+INIT');
+curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+$result = curl_exec($curl);
+
+curl_close($curl);
+
+echo $result;
+
+echo 2;
+
